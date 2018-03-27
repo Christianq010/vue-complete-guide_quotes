@@ -31,4 +31,7 @@
 </script>
 
 <style>
+    body {
+        background-color: #FBE1B6;
+    }
 </style>
