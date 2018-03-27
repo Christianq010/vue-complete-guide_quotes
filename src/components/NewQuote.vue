@@ -6,7 +6,7 @@
                 <textarea class="form-control" rows="3" v-model="quote"></textarea>
             </div>
             <div class="col-md-6 col--offset-3 form-group">
-                <button class="btn-primary" v-bind:click="createNew">Add Quote</button>
+                <button class="btn-primary" v-on:click.prevent="createNew">Add Quote</button>
             </div>
         </form>
     </div>
