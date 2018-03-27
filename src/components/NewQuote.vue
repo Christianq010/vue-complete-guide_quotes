@@ -1,11 +1,9 @@
 <template>
     <div class="row">
         <form>
-            <div class="col-md-6 col--offset-3 form-group">
+            <div class="form-group">
                 <label>Quote</label>
-                <textarea class="form-control" rows="3" v-model="quote"></textarea>
-            </div>
-            <div class="col-md-6 col--offset-3 form-group">
+                <textarea class="form-control" v-model="quote"></textarea>
                 <button class="btn-primary" v-on:click.prevent="createNew">Add Quote</button>
             </div>
         </form>
@@ -28,7 +26,19 @@
     }
 </script>
 
-<style>
+<style scoped>
+    .row {
+        margin: 2em auto;
+        text-align: center;
+    }
+    textarea {
+        margin: 1em auto;
+        width: 60%;
+    }
+    button {
+        margin: 1em;
+    }
+
 </style>
 
 
