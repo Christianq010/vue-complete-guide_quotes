@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-        <app-new-quote @quoteAdded="newQuote"></app-new-quote>
+        <app-new-quote v-on:quoteAdded="newQuote"></app-new-quote>
         <app-quote-grid v-bind:quotes="quotes"></app-quote-grid>
     </div>
 </template>
@@ -13,7 +13,7 @@
         data: function() {
             return {
                 quotes: [
-                    'Just a Quote to see something'
+                    'This is just a random sample'
                 ],
                 maxQuotes: 10
             }
@@ -33,5 +33,6 @@
 <style>
     body {
         background-color: #FBE1B6;
+        margin: 0;
     }
 </style>
