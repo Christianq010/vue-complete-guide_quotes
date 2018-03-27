@@ -1,7 +1,7 @@
 <template>
     <div class="col-md-4">
-        <div class="panel panel-default">
-            <div class="panel-body quote">
+        <div class="panel">
+            <div class="panel-body quote-text quote">
                 <slot></slot>
             </div>
         </div>
@@ -15,12 +15,34 @@
 </script>
 
 <style>
-    .panel-body{
+    .panel-body {
         font-family: 'Lato', sans-serif;
-        font-size: 24px;
-        color: #6e6e6e;
+        color: #fff;
+        width: 100%;
+        overflow: hidden;
+        max-width: 560px;
+        min-height: 390px;
+        margin: 50px 0;
+        background: #17a0ff;
+        position: relative;
+        box-shadow: 0 16px 28px 0 rgba(0,0,0,.22), 0 25px 55px 0 rgba(0,0,0,.21);
+    }
+    .quote-text {
+        font-size: 48px;
+        font-weight: 900;
+        line-height: 55px;
+    }
+    .quote {
+        padding: 15px;
+        width: calc(560px - 140px);
     }
     .quote:hover {
         background-color: palevioletred;
+    }
+    .author-text {
+        bottom: 15px;
+        font-size: 14px;
+        font-weight: 500;
+        position: absolute;
     }
 </style>
