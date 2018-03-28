@@ -2,6 +2,13 @@
     <div class="container">
         <app-new-quote v-on:quoteAdded="newQuote"></app-new-quote>
         <app-quote-grid v-bind:quotes="quotes"></app-quote-grid>
+        <div class="row">
+            <div class="col-sm-12 text-center">
+                <div class="alert alert-success alert-edit">
+                    <p>Click on a Quote to Delete it!</p>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -34,5 +41,12 @@
     body {
         background-color: #FBE1B6;
         margin: 0;
+        font-family: 'Lato', sans-serif;
     }
+
+    .alert-edit {
+        background-color: #A7EFE9;
+        color: white;
+    }
+
 </style>
