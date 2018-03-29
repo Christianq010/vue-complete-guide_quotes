@@ -1,7 +1,7 @@
 <template>
     <div class="container">
         <app-new-quote v-on:quoteAdded="newQuote"></app-new-quote>
-        <app-quote-grid v-bind:quotes="quotes"></app-quote-grid>
+        <app-quote-grid v-bind:quotes="quotes" v-on:quoteDeleted="deleteQuote"></app-quote-grid>
         <div class="row">
             <div class="col-sm-12 text-center">
                 <div class="alert alert-success alert-edit">
@@ -28,6 +28,9 @@
         methods: {
             newQuote(quote) {
                 this.quotes.push(quote);
+            },
+            deleteQuote(index) {
+                this.quotes.splice(index, 1);
             }
         },
         components: {
