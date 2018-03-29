@@ -3,7 +3,7 @@
         <form>
             <div class="form-group">
                 <textarea class="form-control" v-model="quote"></textarea>
-                <button class="btn-primary" v-on:click.prevent="createNew">Add Quote</button>
+                <button class="btn-primary text-uppercase" v-on:click.prevent="createNew">Add Quote</button>
             </div>
         </form>
     </div>
